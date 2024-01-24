@@ -11,13 +11,15 @@ import time
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import config
 
 # Function to send email
 
-EMAIL_SENDER = 'realfitnessteam@gmail.com'
+EMAIL_SENDER = config.EMAIL_SENDER
 # Consider using environment variables for security
-EMAIL_PASSWORD = '17F225A8692CB0F82B3F17DEA8FB28524FD3'
-EMAIL_RECEIVER = 'callumpholt@gmail.com'
+EMAIL_PASSWORD = config.EMAIL_PASSWORD
+EMAIL_RECEIVER = config.EMAIL_RECEIVER
+print("the email sender is:", EMAIL_SENDER)
 
 
 def send_email(email_sender, email_password, email_receiver, subject, body):
@@ -38,9 +40,6 @@ def send_email(email_sender, email_password, email_receiver, subject, body):
         print(f"Failed to send email: {e}")
 
 
-# # Telegram Bot Token and Channel ID
-# TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
-# CHANNEL_ID = YOUR_CHANNEL_ID
 # Options for Chrome WebDriver
 chrome_options = Options()
 chrome_options.add_argument('--no-sandbox')
