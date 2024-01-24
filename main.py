@@ -14,10 +14,10 @@ from email.mime.text import MIMEText
 
 # Function to send email
 
-EMAIL_SENDER = '@gmail.com'
+EMAIL_SENDER = 'realfitnessteam@gmail.com'
 # Consider using environment variables for security
-EMAIL_PASSWORD = ''
-EMAIL_RECEIVER = '@gmail.com'
+EMAIL_PASSWORD = '17F225A8692CB0F82B3F17DEA8FB28524FD3'
+EMAIL_RECEIVER = 'callumpholt@gmail.com'
 
 
 def send_email(email_sender, email_password, email_receiver, subject, body):
